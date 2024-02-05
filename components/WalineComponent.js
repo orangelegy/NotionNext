@@ -2,6 +2,7 @@ import React, { createRef } from 'react'
 import { init } from '@waline/client'
 import { useRouter } from 'next/router'
 import '@waline/client/dist/waline.css'
+import '@waline/client/dist/waline-meta.css';
 import { siteConfig } from '@/lib/config'
 
 const path = ''
@@ -28,13 +29,25 @@ const WalineComponent = (props) => {
         el: containerRef.current,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
-        reaction: true,
+        reaction: [
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili/bb_heart_eyes.png',
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili/bb_thumbsup.png',
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili/bb_doge.png',
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili/bb_zhoumei.png',
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili/bb_sweat.png'
+        ],
         dark: 'html.dark',
         emoji: [
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/tieba',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/weibo',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/bilibili'
-        ]
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
+          '//cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bmoji'
+        ],
+        requiredMeta: ['mail'],
+        locale: {
+          placeholder: '欢迎评论。支持匿名评论，填写邮箱可收到回复提醒。',
+          latest: '最新',
+          oldest: '最早',
+          hottest: '热门'
+        }
       })
     }
 
