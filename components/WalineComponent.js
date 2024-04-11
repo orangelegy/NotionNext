@@ -3,6 +3,7 @@ import { init } from '@waline/client'
 import { useRouter } from 'next/router'
 import '@waline/client/dist/waline.css'
 import { siteConfig } from '@/lib/config'
+import '@waline/client/meta'
 
 const path = ''
 let waline = null
