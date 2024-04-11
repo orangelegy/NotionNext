@@ -3,6 +3,7 @@ import { init } from '@waline/client'
 import { useRouter } from 'next/router'
 import '@waline/client/dist/waline.css'
 import { siteConfig } from '@/lib/config'
+import '@waline/client/meta'
 
 const path = ''
 let waline = null
@@ -31,9 +32,17 @@ const WalineComponent = (props) => {
         reaction: true,
         dark: 'html.dark',
         emoji: [
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/tieba',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/weibo',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/bilibili'
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
+          'https://unpkg.com/@waline/emojis@1.2.0/bmoji'
+        ],
+        requiredMeta: ['mail'],
+        highlighter: true,
+        reaction: [
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_heart_eyes',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_thumbsup',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_doge',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_zhoumei',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_sweat'
         ]
       })
     }
