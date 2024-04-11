@@ -29,14 +29,12 @@ const WalineComponent = (props) => {
         el: containerRef.current,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
-        reaction: true,
         dark: 'html.dark',
         emoji: [
           'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
           'https://unpkg.com/@waline/emojis@1.2.0/bmoji'
         ],
         requiredMeta: ['mail'],
-        highlighter: true,
         reaction: [
           'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_heart_eyes',
           'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_thumbsup',
