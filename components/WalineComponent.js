@@ -36,11 +36,11 @@ const WalineComponent = (props) => {
         ],
         requiredMeta: ['mail'],
         reaction: [
-          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_heart_eyes',
-          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_thumbsup',
-          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_doge',
-          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_zhoumei',
-          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_sweat'
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_heart_eyes.png',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_thumbsup.png',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_doge.png',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_zhoumei.png',
+          'https://unpkg.com/@waline/emojis@1.2.0/bilibili/bb_sweat.png'
         ]
       })
     }
